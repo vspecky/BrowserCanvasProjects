@@ -8,6 +8,9 @@ const cellColorsByStatus = {
     path: "rgb(255, 255, 0)"
 };
 
+const linearDistance = cellSize;
+const diagonalDistance = Math.sqrt(2) * linearDistance;
+
 class Cell {
     constructor(x, y, size) {
         this.x = x
@@ -40,6 +43,21 @@ class Cell {
         return Math.abs(this.centreX - cell.centreX) + Math.abs(this.centreY - cell.centreY);
     }
 
+    heuristicDistanceTo(cell) {
+        let xUnits = Math.abs(this.centreX - cell.centreX) / linearDistance;
+        let yUnits = Math.abs(this.centreY - cell.centreY) / linearDistance;
+
+        if (xUnits > yUnits) {
+            let temp = yUnits;
+            yUnits = xUnits;
+            xUnits = temp;
+        }
+
+        yUnits = yUnits - xUnits;
+
+        return xUnits * diagonalDistance + yUnits * linearDistance;
+    }
+
     setStatus(status) {
         if (this.status !== 'start' && this.status !== 'end') {
             this.status = status;
@@ -47,16 +65,15 @@ class Cell {
     }
 
     maybeSetParent(cell) {
-        const flr = Math.floor
         if (!this.parent) {
-            this.hCost = flr(this.manhattanDistanceTo(endCell));
-            this.gCost = flr(this.distanceTo(cell) + cell.gCost);
+            this.hCost = this.heuristicDistanceTo(endCell);
+            this.gCost = this.heuristicDistanceTo(cell) + cell.gCost;
             this.fCost = this.hCost + this.gCost;
             this.parent = cell;
             return;
         }
 
-        const newGCost = Math.floor(this.distanceTo(cell) + cell.gCost);
+        const newGCost = this.heuristicDistanceTo(cell) + cell.gCost;
 
         if (newGCost <= this.gCost) {
             this.gCost = newGCost;
@@ -113,7 +130,7 @@ class CellGrid {
                 if (!row) continue;
                 const currentCell = row[x];
 
-                if (currentCell instanceof Cell && currentCell !== cell && (y == j || x == i)) {
+                if (currentCell instanceof Cell && currentCell !== cell) {
                     res.push(currentCell);
                 }
             }

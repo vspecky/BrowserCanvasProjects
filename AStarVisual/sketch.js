@@ -60,7 +60,9 @@ function setup() {
         current = null;
 
         grid = new CellGrid(canvasWidth, canvasHeight, cellSize);
-    })
+    });
+
+    frameRate(5);
 
     background(backgroundColor);
 }
@@ -86,7 +88,7 @@ function mouseClicked() {
         startingCell = cell;
         if (isSelectedEnd) {
             startingCell.gCost = 0
-            startingCell.hCost = Math.floor(startingCell.manhattanDistanceTo(endCell));
+            startingCell.hCost = startingCell.heuristicDistanceTo(endCell);
             startingCell.fCost = startingCell.gCost + startingCell.hCost;
         }
         selectingStart = false;
@@ -102,7 +104,7 @@ function mouseClicked() {
         endCell = cell;
         if (isSelectedStart) {
             startingCell.gCost = 0
-            startingCell.hCost = Math.floor(startingCell.manhattanDistanceTo(endCell));
+            startingCell.hCost = startingCell.heuristicDistanceTo(endCell);
             startingCell.fCost = startingCell.gCost + startingCell.hCost;
         }
         selectingEnd = false;

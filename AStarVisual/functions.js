@@ -24,14 +24,14 @@ function getClosestNode(openNodes) {
 }
 
 function handleNeighborCells(current, neighbors) {
-    let cells = neighbors.filter(elem => elem.status !== 'obstacle' && elem.status !== 'start');
+    let cells = neighbors.filter(elem => elem.status !== 'obstacle' && elem.status !== 'start' && elem.status !== 'closed');
 
     for (const cell of cells) {
         cell.maybeSetParent(current);
-        if (cell.status !== 'closed') cell.setStatus('open');
+        if (cell.status === 'empty') cell.setStatus('open');
     }
 
-    cells = cells.filter(elem => elem.status !== 'closed');
+    //cells = cells.filter(elem => elem.status !== 'closed');
 
     return cells;
 }
