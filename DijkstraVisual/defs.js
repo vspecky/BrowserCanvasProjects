@@ -1,6 +1,6 @@
 const canvasWidth = 1500;
 const canvasHeight = 900;
-const cellSize = 50;
+const cellSize = 30;
 
 const backgroundColor = "rgb(190, 190, 190)";
 

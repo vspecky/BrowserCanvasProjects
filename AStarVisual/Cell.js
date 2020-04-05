@@ -23,16 +23,11 @@ class Cell {
         this.hCost = null;
         this.parent = null;
         this.status = 'empty'
-        this.color = backgroundColor;
     }
 
     draw() {
         fill(cellColorsByStatus[this.status]);
         rect(this.x, this.y, this.size, this.size);
-    }
-
-    setColor(color) {
-        this.color = color
     }
 
     distanceTo(cell) {
@@ -64,7 +59,7 @@ class Cell {
         }
     }
 
-    maybeSetParent(cell) {
+    maybeSetParent(cell, endCell) {
         if (!this.parent) {
             this.hCost = this.heuristicDistanceTo(endCell);
             this.gCost = this.heuristicDistanceTo(cell) + cell.gCost;
@@ -80,62 +75,5 @@ class Cell {
             this.fCost = this.hCost + this.fCost;
             this.parent = cell;
         }
-    }
-}
-
-class CellGrid {
-    constructor(cWidth, cHeight, size) {
-        this.cellSize = size;
-        const totalCellsX = Math.floor(cWidth / size);
-        const totalCellsY = Math.floor(cHeight / size);
-
-        this.cells = []
-
-        for (let y = 0; y < totalCellsY; y++) {
-            const cellRow = [];
-
-            for (let x = 0; x < totalCellsX; x++) {
-                const cell = new Cell(x * size, y * size, size);
-                cellRow.push(cell);
-            }
-
-            this.cells.push(cellRow);
-        }
-    }
-
-    drawCells() {
-        noFill();
-        stroke(0);
-        for (const cellRow of this.cells) {
-            for (const cell of cellRow) {
-                cell.draw();
-            }
-        }
-    }
-
-    distance(cell1, cell2) {
-        return cell1.distanceTo(cell2);
-    }
-
-    getNeighbors(cell) {
-        const i = cell.x / this.cellSize;
-        const j = cell.y / this.cellSize;
-
-        const res = [];
-
-
-        for (let y = j - 1; y < j + 2; y++) {
-            for (let x = i - 1; x < i + 2; x++) {
-                const row = this.cells[y];
-                if (!row) continue;
-                const currentCell = row[x];
-
-                if (currentCell instanceof Cell && currentCell !== cell) {
-                    res.push(currentCell);
-                }
-            }
-        }
-
-        return res;
     }
 }

@@ -1,5 +1,5 @@
-# Dijkstra's Algorithm Visualization
-A visualization of Dijkstra's Algorithm.
+# A* Algorithm Visualization
+A visualization of A* Algorithm.
 ## Instructions
 - Press and hold `S` and click on a square to set it as the starting node.
 - Press and hold `E` and click on a square to set it as the ending square.
