@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dijkstra's Algorithm</title>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
-    <!-- <script src="../p5.js"></script> -->
+    <title>Maze Generator</title>
     <link rel="stylesheet" href="../css/bootstrap.css">
 </head>
 <body>
     <div class="container">
-        <h1 class="text-center">Dijkstra's Algorithm</h1>
-        <a href="https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm">
+        <h1 class="text-center">Maze Generator</h1>
+        <a href="https://en.wikipedia.org/wiki/Maze_generation_algorithm">
             <p class="text-center">Learn more...</p>
         </a>
     </div>
@@ -35,16 +34,15 @@
         <h3>Instructions</h3>
         <ul>
             <li>Press and hold <strong>S</strong> and click on a square to set it as the starting node.</li>
-            <li>Press and hold <strong>E</strong> and click on a square to set it as the ending square.</li>
-            <li>Press and hold <strong>Q</strong> and click and drag your mouse across the board to set obstacles.</li>
             <li>Click the <strong>Start</strong> button to start the visualization.</li>
             <li>Click the <strong>Reset</strong> button to reset the board once the simulation is finished.</li>
         </ul>
     </div>
 
     <script src="defs.js"></script>
+    <script src="Wall.js"></script>
     <script src="Cell.js"></script>
-    <script src="Dijkstra.js"></script>
+    <script src="MazeGenerator.js"></script>
     <script src="sketch.js"></script>
 </body>
 </html>
