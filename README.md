@@ -5,3 +5,4 @@ You can play with these [here](https://vspecky.github.io/BrowserCanvasProjects/i
 - A* Visualizer (AStarVisual) - Visualization of the A* pathfinding algorithm.
 - Dijkstra's Visualizer (DijkstraVisual) - Visualization of Dijkstra's algorithm.
 - Maze Generator (MazeGenerator) - Maze generation using DFS and backtracking.
+- Ray Tracing (RayTracing) - Visuzlization of how Ray Tracing works.

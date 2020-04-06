@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
+    <title>Ray Tracing</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Ray Tracing</h1>
+        <a href="https://en.wikipedia.org/wiki/Ray_tracing_(graphics)">
+            <p class="text-center">Learn more... (Ray Tracing)</p>
+        </a>
+        <a href="https://en.wikipedia.org/wiki/Ray_casting">
+            <p class="text-center">Learn more... (Ray Casting)</p>
+        </a>
+        <a href="https://en.wikipedia.org/wiki/Line%E2%80%93line_intersection">
+            <p class="text-center">Learn more... (Line-Line Intersection)</p>
+        </a>
+    </div>
+
+    <div id='sketch' style="margin: 0; display: flex; justify-content: center; align-items: center;">
+        <!-- Sketch goes here -->
+    </div>
+
+    <div class="container">
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-sm d-flex justify-content-center">
+                <button class="btn btn-primary" id="mouse-control">Mouse Control</button>
+            </div>
+            <div class="col-sm d-flex justify-content-center">
+                <button class="btn btn-primary" id="randomize-walls">Randomize Walls</button>
+            </div>
+        </div>
+        <br>
+
+        <h3>Instructions</h3>
+        <ul>
+            <li>Press and hold the <strong>W</strong> key to move forward.</li>
+            <li>Press and hold the <strong>S</strong> key to move backwards.</li>
+            <li>Press and Hold the <strong>A</strong> and <strong>D</strong> keys to rotate the point.</li>
+            <li>
+                Click the <strong>Mouse Control</strong> button to use your mouse to move the point. You can still rotate the point using the arrow keys.
+                Click it again to go back to keyboard mode.
+            </li>
+            <li>Click the <strong>Randomize Walls</strong> buton to randomize the walls.</li>
+        </ul>
+    </div>
+
+    <script src="defs.js"></script>
+    <script src="Ray.js"></script>
+    <script src="Wall.js"></script>
+    <script src="Particle.js"></script>
+    <script src="sketch.js"></script>
+</body>
+</html>
