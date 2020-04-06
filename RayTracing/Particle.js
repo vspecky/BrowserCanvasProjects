@@ -30,9 +30,14 @@ class Particle {
     }
 
     cast(walls) {
+        let idx = 1;
+
         for (const ray of this.rays) {
             let minDist = Infinity;
             let closestWall = null;
+
+            const alpha = map(Math.abs(this.rays.length / 2 - idx), -400, 400, 255, 0);
+            idx++;
 
             for (const wall of walls) {
                 const pt = ray.getIntersectionPoint(wall)
@@ -42,7 +47,7 @@ class Particle {
                 }
             }
 
-            if (closestWall) ray.cast(closestWall);
+            if (closestWall) ray.cast(closestWall, alpha);
         }
     }
 
