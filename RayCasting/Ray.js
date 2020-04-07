@@ -49,6 +49,7 @@ class Ray {
     }
 
     cast(wall, alpha) {
+        //console.log(closenessFactor);
         const intersect = this.getIntersectionPoint(wall);
 
         if (!intersect.pt) return;
@@ -56,7 +57,7 @@ class Ray {
         stroke(255, alpha * 0.2);
         line(this.pos.x, this.pos.y, intersect.pt.x, intersect.pt.y);
         noStroke();
-        fill(255, alpha * 0.2);
+        fill(255, 20);
         circle(intersect.pt.x, intersect.pt.y, 2.8);
         
     }
