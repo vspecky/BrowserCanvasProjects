@@ -4,20 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
-    <title>Ray Casting 2D</title>
+    <title>Ray Casting 3D</title>
     <link rel="stylesheet" href="../css/bootstrap.css">
 </head>
 <body>
     <div class="container">
-        <h1 class="text-center">Ray Casting 2D</h1>
-        <a href="https://en.wikipedia.org/wiki/Ray_tracing_(graphics)">
-            <p class="text-center">Learn more... (Ray Tracing)</p>
-        </a>
-        <a href="https://en.wikipedia.org/wiki/Ray_casting">
-            <p class="text-center">Learn more... (Ray Casting)</p>
-        </a>
-        <a href="https://en.wikipedia.org/wiki/Line%E2%80%93line_intersection">
-            <p class="text-center">Learn more... (Line-Line Intersection)</p>
+        <h1 class="text-center">Ray Casting 3D</h1>
+        <a href="https://lodev.org/cgtutor/raycasting.html#Introduction">
+            <p class="text-center">Learn more...</p>
         </a>
     </div>
 
@@ -29,7 +23,7 @@
         <br>
         <div class="row justify-content-center">
             <div class="col-sm d-flex justify-content-center">
-                <button class="btn btn-primary" id="mouse-control">Mouse Control</button>
+                <button class="btn btn-primary" id="switch-perspective">Switch Perspective</button>
             </div>
             <div class="col-sm d-flex justify-content-center">
                 <button class="btn btn-primary" id="randomize-walls">Randomize Walls</button>
@@ -42,10 +36,7 @@
             <li>Press and hold the <strong>W</strong> key to move forward.</li>
             <li>Press and hold the <strong>S</strong> key to move backwards.</li>
             <li>Press and Hold the <strong>A</strong> and <strong>D</strong> keys to rotate the point.</li>
-            <li>
-                Click the <strong>Mouse Control</strong> button to use your mouse to move the point. You can still rotate the point using the arrow keys.
-                Click it again to go back to keyboard mode.
-            </li>
+            <li>Click the <strong>Switch Perspective</strong> button to switch between 2D/3D perspectives.</li>
             <li>Click the <strong>Randomize Walls</strong> button to randomize the walls.</li>
         </ul>
     </div>
