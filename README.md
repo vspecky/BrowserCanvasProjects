@@ -6,4 +6,5 @@ You can play with these [here](https://vspecky.github.io/BrowserCanvasProjects/i
 - Dark Maze Game (DarkMaze) - A simple game that combines 2D Ray casting and Maze Generation.
 - Dijkstra's Visualizer (DijkstraVisual) - Visualization of Dijkstra's algorithm.
 - Maze Generator (MazeGenerator) - Maze generation using DFS and backtracking.
-- Ray Casting (RayCasting) - Visuzlization of how Ray Casting works.
+- Ray Casting (RayCasting) - Visualization of how Ray Casting works.
+- Ray Casting 3D (RayCasting3D) - Ray Casting with 3D rendering.
