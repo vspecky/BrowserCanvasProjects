@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.min.js"></script>
+    <title>Chaos Game</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Chaos Game</h1>
+        <a href="https://en.wikipedia.org/wiki/Chaos_game">
+            <p class="text-center">Learn more...</p>
+        </a>
+    </div>
+
+    <div id='sketch' style="margin: 0; display: flex; justify-content: center; align-items: center;">
+        <!-- Sketch goes here -->
+    </div>
+
+    <div class="container">
+        <br>
+        <div class="d-flex justify-content-center">
+            <button class="btn btn-primary" id="reset">Reset</button>
+        </div>
+
+        <h3>The Algorithm</h3>
+        <ul>
+            <li>3 random points are chosen at the start such that they form a triangle.</li>
+            <li>A 'Wanderer' is placed at the centroid of the triangle.</li>
+            <li>At every step, the wanderer chooses one of the three points, moves halfway to the point and marks the new point white.</li>
+            <li>This gives rise to the famous Sierpinski Triangle</li>
+            <li>Press <strong>Reset</strong> to reset the simulation.</li>
+        </ul>
+    </div>
+
+    <script src="defs.js"></script>
+    <script src="sketch.js"></script>
+</body>
+</html>

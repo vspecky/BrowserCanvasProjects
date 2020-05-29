@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.min.js"></script>
+    <title>Game of Life</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">John Conway's Game of Life</h1>
+        <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">
+            <p class="text-center">Learn more...</p>
+        </a>
+    </div>
+
+    <div id='sketch' style="margin: 0; display: flex; justify-content: center; align-items: center;">
+        <!-- Sketch goes here -->
+    </div>
+
+    <div class="container">
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-sm d-flex justify-content-center">
+                <button class="btn btn-primary" id="start">Start</button>
+            </div>
+            <div class="col-sm d-flex justify-content-center">
+                <button class="btn btn-primary" id="reset">Reset</button>
+            </div>
+            <div class="col-sm d-flex justify-content-center">
+                <button class="btn btn-primary" id="inc-speed">Inc Speed</button>
+            </div>
+            <div class="col-sm d-flex justify-content-center">
+                <button class="btn btn-primary" id="dec-speed">Dec Speed</button>
+            </div>
+        </div>
+        <br>
+        <h3>Rules of the Game</h3>
+        <ul>
+            <li>
+                Every cell has 8 neighbors except cells at the edges (The edge cells are also supposed 
+                to have 8 neighbors since the grid is supposed to be infinite but this is just a condensed 
+                down version of the grid).
+            </li>
+            <li>White cells are alive, black cells are dead.</li>
+            <li>At any step 't', a live cell with either 2 or 3 live neighbors will still be a live cell at step 't + 1'.</li>
+            <li>At any step 't', if a dead cell has exactly 3 live neigbors, it will become alive as if by reproduction at step 't + 1'.</li>
+            <li>Any other live cells die in the next generation, and dead cells stay dead.</li>
+        </ul>
+        <br>
+        <h3>Instructions</h3>
+        <ul>
+            <li>Drag your mouse around on the board to set live cells.</li>
+            <li>Hold <strong>E</strong> while dragging to erase live cells.</li>
+            <li>Click the <strong>Start</strong> button or press <strong>S</strong> to start the Game of Life.</li>
+            <li>Click the <strong>Reset</strong> button or press <strong>R</strong> to reset the grid.</li>
+            <li>Click the <strong>Inc Speed</strong> button or press <strong>UP Arrow</strong> to increase the speed.</li>
+            <li>Click the <strong>Dec Speed</strong> button or press <strong>DOWN Arrow</strong> to increase the speed.</li>
+        </ul>
+    </div>
+
+    <script src="defs.js"></script>
+    <script src="Cell.js"></script>
+    <script src="GameOfLife.js"></script>
+    <script src="sketch.js"></script>
+</body>
+</html>
