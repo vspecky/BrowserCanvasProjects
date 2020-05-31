@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.min.js"></script>
+    <title>Supershapes</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Supershapes (2D)</h1>
+        <a href="http://paulbourke.net/geometry/supershape/">
+            <p class="text-center">Learn more...</p>
+        </a>
+    </div>
+
+    <div id='sketch' style="margin: 0; display: flex; justify-content: center; align-items: center;">
+        <!-- Sketch goes here -->
+    </div>
+
+    <br>
+
+    <div class="container">
+        <h4>Value of m: </h3>
+        <div class="row">
+            <input type="range" class="custom-range col-9" id="m-slid" min="0" max="100" step="1" value="1">
+            <input type="text" id="m-inp" class="col-2 ml-2" value="1">
+        </div>
+        <h4>Value of n1: </h3>
+        <div class="row">
+            <input type="range" class="custom-range col-9" id="n1-slid" min="0" max="100" step="0.1" value="1">
+            <input type="text" id="n1-inp" class="col-2 ml-2" value="1">
+        </div>
+        <h4>Value of n2: </h3>
+        <div class="row">
+            <input type="range" class="custom-range col-9" id="n2-slid" min="0" max="100" step="0.1" value="1">
+            <input type="text" id="n2-inp" class="col-2 ml-2" value="1">
+        </div>
+        <h4>Value of n3: </h3>
+        <div class="row">
+            <input type="range" class="custom-range col-9" id="n3-slid" min="0" max="100" step="0.1" value="1">
+            <input type="text" id="n3-inp" class="col-2 ml-2" value="1">
+        </div>
+        <h4>Value of a: </h3>
+        <div class="row">
+            <input type="range" class="custom-range col-9" id="a-slid" min="0" max="100" step="0.1" value="1">
+            <input type="text" id="a-inp" class="col-2 ml-2" value="1">
+        </div>
+        <h4>Value of b: </h3>
+        <div class="row">
+            <input type="range" class="custom-range col-9" id="b-slid" min="0" max="100" step="0.1" value="1">
+            <input type="text" id="b-inp" class="col-2 ml-2" value="1">
+        </div>
+        <br>
+        <p>Use these sliders/boxes to adjust the values of various variables used in the formula.</p>
+
+        <br>
+        <h1>What is this?</h1>
+        <p>A supershape is just a curve in space based upon a modified version
+            of the ellipse equation: (x / a)^2 + (y / b)^2 = r^2
+        </p>
+        <br>
+        <p>
+            Using polar co-ordinates, the superformula can be denoted as follows.
+            Use the 'Learn more...' link for more information. Image credits go to
+            the creator of paulbourke.net
+        </p>
+        <div class="d-flex justify-content-center">
+            <img src="formula.gif" alt="Superformula">
+        </div>
+        <br>
+
+    </div>
+
+    <script src="defs.js"></script>
+    <script src="Supershapes.js"></script>
+    <script src="sketch.js"></script>
+    <script src="sliders.js"></script>
+</body>
+</html>

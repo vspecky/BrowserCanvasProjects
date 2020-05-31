@@ -11,3 +11,4 @@ You can play with these [here](https://vspecky.github.io/BrowserCanvasProjects/i
 - [Dark Maze 3D](https://vspecky.github.io/BrowserCanvasProjects/DarkMaze3D/index.html) (DarkMaze3D) - Dark Maze Game + Ray Casting 3D.
 - [Chaos Game](https://vspecky.github.io/BrowserCanvasProjects/ChaosGame/index.html) (ChaosGame) - Sierpinski Triangle version of the Chaos Game.
 - [Game of Life](https://vspecky.github.io/BrowserCanvasProjects/GameOfLife/index.html) (GameOfLife) - John Conway's Game of Life.
+- [Supershapes (2D)](https://vspecky.github.io/BrowserCanvasProjects/Supershapes/index.html) (Supershapes) - 2D Supershapes using the Superformula.
