@@ -12,3 +12,4 @@ You can play with these [here](https://vspecky.github.io/BrowserCanvasProjects/i
 - [Chaos Game](https://vspecky.github.io/BrowserCanvasProjects/ChaosGame/index.html) (ChaosGame) - Sierpinski Triangle version of the Chaos Game.
 - [Game of Life](https://vspecky.github.io/BrowserCanvasProjects/GameOfLife/index.html) (GameOfLife) - John Conway's Game of Life.
 - [Supershapes (2D)](https://vspecky.github.io/BrowserCanvasProjects/Supershapes/index.html) (Supershapes) - 2D Supershapes using the Superformula.
+- [3D Shapes](https://vspecky.github.io/BrowserCanvasProjects/3DShapes/index.html) (3DShapes) - Visualizing 3D shapes on your 2D screen.

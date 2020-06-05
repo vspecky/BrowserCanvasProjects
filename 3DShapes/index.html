@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.min.js"></script>
+    <title>3D Shapes</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">3D Shapes</h1>
+        <a href="https://en.wikipedia.org/wiki/2.5D">
+            <p class="text-center">Learn more...</p>
+        </a>
+    </div>
+
+    <div id='sketch' style="margin: 0; display: flex; justify-content: center; align-items: center;">
+        <!-- Sketch goes here -->
+    </div>
+
+    <div class="container">
+        <br>
+        <div class="row">
+            <div class="col-sm d-flex justify-content-center">
+                <button class="btn btn-primary" id="reset">Reset</button>
+            </div>
+            <div class="col-sm d-flex justify-content-center">
+                <button class="btn btn-primary" id="cube">Cube</button>
+            </div>
+            <div class="col-sm d-flex justify-content-center">
+                <button class="btn btn-primary" id="pyramid">Pyramid</button>
+            </div>
+            <div class="col-sm d-flex justify-content-center">
+                <button class="btn btn-primary" id="tetra">Tetrahedron</button>
+            </div>
+        </div>
+        <br>
+        <p>Note: No 3D Engine was used. All calculations to facilitate 3D have been done from scratch (Strictly speaking it's 2.5D or False 3D).</p>
+        <br>
+        <h3>Instructions</h3>
+        <ul>
+            <li>Use the <strong>WASD</strong> keys to rotate the shape.</li>
+            <li>Use the <strong>Reset</strong> button to reset the shape.</li>
+            <li>Use the other buttons to change the shape.</li>
+        </ul>
+    </div>
+
+    <script src="defs.js"></script>
+    <script src="Camera.js"></script>
+    <script src="Plane3D.js"></script>
+    <script src="sketch.js"></script>
+</body>
+</html>
